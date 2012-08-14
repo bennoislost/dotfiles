@@ -33,3 +33,6 @@ alias ios="open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSi
 # Show/Hide the desktop... always useful
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# Remove data in Trash
+alias trashrm="sudo rm -rfv ~/.Trash"
