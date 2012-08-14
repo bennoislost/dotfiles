@@ -24,3 +24,12 @@ alias remote_ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Launch iOS Simulator
 alias ios="open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
+
+#######################################################
+# OSX
+#######################################################
+
+# Show/Hide the desktop... always useful
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
