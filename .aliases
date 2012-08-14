@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# ~/.aliases - Some sweet shortcuts...
+
+#######################################################
+# Directory Browsing
+#######################################################
+
+# Fast navigation...
+alias ..="cd  .."
