@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# ~/.function - Some sweet functions...
+
+#######################################################
+# Dynamic Servers
+#######################################################
+
+# Webserver
+function webserver() {
+	
+	# Random port number..
+	# @TODO: Check for port in use...
+	local port=$(jot -r 1 8080 8090)
+	
+	sleep 1 && open "http://localhost:${port}/" &
+	
+	python -m SimpleHTTPServer $port
+}
