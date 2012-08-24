@@ -9,6 +9,9 @@
 # Fast navigation...
 alias ..="cd  .."
 
+# List current directories @TODO: pass arguments?
+alias dir="ls -lah | grep '^d'"
+
 
 #######################################################
 # Networking
