@@ -106,3 +106,4 @@ for app in "Dashboard" "Dock" "Finder" "SystemUIServer"; do
 
 	killall "$app" > /dev/null 2>&1
 done
+unset app
