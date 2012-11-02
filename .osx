@@ -49,6 +49,9 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # Display hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
+# Disable warning when changing file extensions
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Display file name extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
