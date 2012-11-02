@@ -69,5 +69,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Dock
 #######################################################
 
+# Never auto hide hide the dock
+defaults write com.apple.dock autohide -bool false
+
 # Set default size of Dock items
 defaults write com.apple.dock tilesize -int 35
+
