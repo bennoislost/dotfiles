@@ -28,6 +28,8 @@ alias remoteip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Launch iOS Simulator
 alias ios="open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
+# Vagrant
+alias vag="vagrant"
 
 #######################################################
 # OSX
