@@ -72,6 +72,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Never auto hide hide the dock
 defaults write com.apple.dock autohide -bool false
 
+# Display dashboard as a space
+defaults write com.apple.dock dashboard-in-overlay -bool false
+
 # Set default size of Dock items
 defaults write com.apple.dock tilesize -int 35
 
