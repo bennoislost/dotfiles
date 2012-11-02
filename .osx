@@ -45,3 +45,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Display hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Display file name extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
