@@ -63,3 +63,11 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Don't write .DS_Store files to network drives
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+
+#######################################################
+# Dock
+#######################################################
+
+# Set default size of Dock items
+defaults write com.apple.dock tilesize -int 35
