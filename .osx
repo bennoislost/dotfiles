@@ -40,6 +40,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Display status bar on windows
 defaults write com.apple.finder ShowStatusBar -bool true
 
+# Always use list view for finder windows
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
