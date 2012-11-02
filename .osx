@@ -37,6 +37,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Finder
 #######################################################
 
+# Display status bar on windows
+defaults write com.apple.finder ShowStatusBar -bool true
+
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
