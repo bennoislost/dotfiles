@@ -20,6 +20,14 @@ alias dir="ls -lah | grep '^d'"
 # fetch remote ip
 alias remoteip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+# flush dns cache
+alias flushdns="dscacheutil -flushcache"
+
+# One of @janmoesen’s ProTip™s
+# Perform basic UA requests from terminal
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+	alias "$method"="lwp-request -m '$method'"
+done
 
 #######################################################
 # Applications
