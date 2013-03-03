@@ -4,6 +4,15 @@
 
 sudo -v
 
+
+#######################################################
+# System, UI and UX
+#######################################################
+
+# Show expanded save window by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+
 #######################################################
 # Mouse, Trackpad, Keyboard and devices
 #######################################################
