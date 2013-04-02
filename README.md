@@ -7,7 +7,7 @@
 To install these dotfiles without Git:
 
 ```
-cd; curl -#L https://github.com/bennoislost/dotfiles/zipball/master | tar -xzv --strip-components 1 --exclude={README.md}
+cd; curl -#L https://github.com/bennoislost/dotfiles/zipball/master | tar -xzv --strip-components 1 --exclude=README.md
 ```
 
 Update using that script.
