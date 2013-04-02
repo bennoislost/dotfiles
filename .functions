@@ -24,3 +24,13 @@ function dock-space() {
 	defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 	killall Dock
 }
+
+# Remove bastard .DS_Store files recursively from the current directory
+function rm-dsstore() {
+	find . -name ".DS_Store" -depth -exec rm -vf {} \;
+}
+
+# List fucking .DS_Store files recursively from the current directory
+function ls-dsstore() {
+	find . -name ".DS_Store" -depth
+}
