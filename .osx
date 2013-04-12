@@ -33,6 +33,14 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 
+############
+# Shortcuts
+############
+
+# CMD + Escape to enter/exit full screen mode
+defaults write ~/Library/Preferences/.GlobalPreferences.plist NSUserKeyEquivalents -dict-add "Enter Full Screen" "@\\U238b" "Exit Full Screen" "@\\U238b"
+
+
 #######################################################
 # Screen
 #######################################################
