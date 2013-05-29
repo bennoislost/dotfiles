@@ -3,6 +3,11 @@
 # Define default editor
 export EDITOR="pico"
 
+# Pretty Coloursdisct
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
 # Don't clear screen when exiting a man page
 export MANPAGER="less -X"
 

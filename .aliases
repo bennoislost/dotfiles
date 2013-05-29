@@ -12,6 +12,17 @@ alias ..="cd  .."
 # List current directories @TODO: pass arguments?
 alias dir="ls -lah | grep '^d'"
 
+# Nice list
+alias ll="ls -lah"
+
+
+#######################################################
+# Git SCM
+#######################################################
+
+# Sexy Status
+alias gstatus='git status -s'
+
 
 #######################################################
 # Networking
