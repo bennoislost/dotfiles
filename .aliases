@@ -15,6 +15,12 @@ alias dir="ls -lah | grep '^d'"
 # Nice list
 alias ll="ls -lah"
 
+# Sites directory
+alias sites="cd ~/Sites"
+
+# Projects directory
+alias projects="cd ~/Projects"
+
 
 #######################################################
 # Git SCM
