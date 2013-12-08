@@ -1,7 +1,7 @@
 # ~/.exports - create some variables....
 
 # Define default editor
-export EDITOR="pico"
+export EDITOR="subl -w"
 
 # Pretty Coloursdisct
 export LS_OPTIONS='--color=auto'
