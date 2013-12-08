@@ -8,13 +8,10 @@ brew upgrade
 
 # Stir that brew
 brew tap homebrew/dupes
-brew tap josegonzalez/homebrew-php
 
 # and drink
 brew install mysql
-brew install php54 --without-pear --without-apache --with-fpm --with-gmp
 brew install wget
-brew install nano
 
 # clean that shit up for next time
 brew cleanup
