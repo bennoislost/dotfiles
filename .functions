@@ -8,13 +8,13 @@
 
 # Webserver
 function webserver() {
-	
+
 	# Random port number..
 	# @TODO: Check for port in use...
 	local port=$(jot -r 1 8080 8090)
-	
+
 	sleep 1 && open "http://localhost:${port}/" &
-	
+
 	python -m SimpleHTTPServer $port
 }
 
@@ -33,4 +33,15 @@ function rm-dsstore() {
 # List fucking .DS_Store files recursively from the current directory
 function ls-dsstore() {
 	find . -name ".DS_Store" -depth
+}
+
+# Enable Xdebug extension for php-cli scripts
+function xdebug-listen() {
+	export XDEBUG_CONFIG="idekey=PHPSTORM"
+}
+
+# Disable Xdebug extension for php-cli scripts
+function xdebug-stoplistening()
+{
+	unset XDEBUG_CONFIG
 }
