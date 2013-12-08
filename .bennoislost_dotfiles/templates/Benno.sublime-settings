@@ -1,0 +1,30 @@
+{
+	// Theme
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+
+	// Fonts
+	"font_face": "Monaco",
+	"font_size": 14,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+
+	// Editor
+	"preview_on_click": false,
+	"default_line_ending": "unix",
+	"detect_indentation": false,
+	"find_selected_text": true,
+	"bold_folder_labels": true,
+	"highlight_modified_tabs": true,
+	"trim_trailing_white_space_on_save": true,
+	"remember_open_files": false,
+	"draw_white_space": "all",
+	"draw_minimap_border": true,
+	"tab_size": 4,
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"word_wrap": false,
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_",
+	"rulers": [
+		120
+	]
+}
