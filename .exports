@@ -14,6 +14,11 @@ export MANPAGER="less -X"
 # Colour in those GREPS
 export GREP_OPTIONS="--color=auto"
 
+# nice one @bagwaa
+function parse_git_branch () {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Prompt and prompt colors
 function set_prompt {
 	local BLACK="\[\033[0;30m\]"
@@ -34,6 +39,7 @@ function set_prompt {
 	local WHITEBOLD="\[\033[1;37m\]"
 	local NORMAL="\[\e[0m\]"
 
-	export PS1="\n\[\033[0;31m\][benno]$NORMAL 💀  $GREENBOLD\u@\h$NORMAL:$CYAN\$PWD$NORMAL\$ "
+	export PS1="\n$RED[benno] 💀 $NORMAL$GREENBOLD\u@\h$NORMAL:$CYAN\$PWD$NORMAL$YELLOW\$(parse_git_branch)$NORMAL $\n"
+	export SUDO_PS1="\n$RED[\u] 👊  \[\e[33;01;41m\] \u@\H $NORMAL:$CYAN\$PWD$NORMAL\n"
 }
 set_prompt
