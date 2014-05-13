@@ -18,6 +18,37 @@ function webserver() {
 	python -m SimpleHTTPServer $port
 }
 
+# Restarting
+function apache() {
+
+	if [ "$#" -eq 0 ]
+	then
+		echo >&2 "Please specify a command"
+		return
+	fi
+
+	local action=$1
+	local apache_path="/usr/sbin/apachectl"
+	local apache_cmd="sudo ${apache_path}"
+
+	# config test
+	$apache_cmd -t
+
+	if [ $action = "restart" ]
+	then
+		echo >&2 "Restarting Apache"
+		$apache_cmd restart
+
+		return
+	else
+		echo >&2 "Unknown action"
+
+		return
+	fi
+
+	return
+}
+
 # Switch OSX Liip PHP Version
 function switchphp() {
 
