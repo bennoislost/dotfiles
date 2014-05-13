@@ -18,6 +18,39 @@ function webserver() {
 	python -m SimpleHTTPServer $port
 }
 
+# Switch OSX Liip PHP Version
+function switchphp() {
+
+	# Make sure a path to php was sent
+	if [ "$#" -eq 0 ]
+	then
+		echo >&2 "Please specify a path to PHP"
+		return
+	fi
+
+	local new_php_version=$1
+	local php_path="/usr/local/php5"
+
+	# Make sure input is a directory
+	if [ ! -d $new_php_version ]
+	then
+		echo >&2 "Please specify a valid path to PHP"
+		return
+	fi
+
+	if [ -L $php_path ]
+	then
+		sudo rm -rf $php_path
+	fi
+
+	# Register new php version
+	ln -s $new_php_version $php_path
+
+	/usr/local/php5/bin/php -v
+
+	return
+}
+
 # Add Space to dock
 function dock-space() {
 
