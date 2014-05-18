@@ -99,6 +99,16 @@ function ls-dsstore() {
 	find . -name ".DS_Store" -depth
 }
 
+# Display broken symlinks
+function symlinks-broken() {
+	find . -type l -exec test ! -e {} \; -print
+}
+
+# Remove broken symlinks
+function symlinks-broken-rm() {
+	find . -type l -exec test ! -e {} \; -delete
+}
+
 # Enable Xdebug extension for php-cli scripts
 function xdebug-listen() {
 	export XDEBUG_CONFIG="idekey=PHPSTORM"
