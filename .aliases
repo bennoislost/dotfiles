@@ -29,6 +29,9 @@ alias projects="cd ~/Projects"
 # Sexy Status
 alias gstatus='git status -s'
 
+# really pisses me off
+alias gti='git '
+
 
 #######################################################
 # Networking
