@@ -14,6 +14,9 @@
     # Commit
     c = commit
 
+    # Changelog for tags or trees: git changelog master...feature/pimp_git_config
+    changelog = log --pretty=oneline --no-merges
+
     # Checkout
     co = checkout
 
@@ -25,6 +28,30 @@
 
     # Diff cached
     dc = diff --cached
+
+    # Switch to a branch, creating it if necessary: git go feature/name
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+    # Interactive rebase with the given number of latest commits: git reb 10
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # Stash branch: git stb feature/stash_branch [stash_index]
+    stb = stash branch
+
+    # Stash clear - Remove all stash states
+    stc = stash clear
+
+    # Stash list
+    stl = stash list
+
+    # Stash pop - Apply last item to working tree and remove from stash list
+    stp = stash pop
+
+    # Stash save - Local mods. to a new stash list
+    sts = stash save
+
+    # Undo last commit without deleting changes
+    undo = reset --soft HEAD~1
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
