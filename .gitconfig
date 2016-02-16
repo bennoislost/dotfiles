@@ -14,17 +14,23 @@
     # Verbose branch output
     branches = branch -a
 
-    # Commit
-    c = commit
-
     # Changelog for tags or trees: git changelog master...feature/pimp_git_config
     changelog = log --pretty=oneline --no-merges
+
+    # Commit
+    ci = commit
+
+    # clone
+    cl = clone
 
     # Cleanup
     cleanup = !git remote prune origin && git gc --aggressive && git clean -dfx && git stash clear
 
     # Checkout
     co = checkout
+
+    # Cherry Pick
+    cp = cherry-pick
 
     # Show contributors
     contrib = shortlog --summary --numbered
@@ -43,6 +49,9 @@
 
     # Find string in codebase
     gr = grep -Ii --heading
+
+    # Log file changes: git lf local.xml
+    lf = log -u
 
     # Log graph
     lg = log --graph --decorate --pretty="oneline"
