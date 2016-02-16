@@ -1,6 +1,30 @@
 [user]
     name = Ben McManus
     email = user@server.loc
+[alias]
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+
+    # Shorthand branch
+    br = branch
+
+    # Verbose branch output
+    branches = branch -a
+
+    # Commit
+    c = commit
+
+    # Checkout
+    co = checkout
+
+    # Cleanup
+    cleanup = !git remote prune origin && git gc --aggressive && git clean -dfx && git stash clear
+
+    # show files that have changed between two branches (git dbr master..branch)
+    dbr = diff --name-status
+
+    # Diff cached
+    dc = diff --cached
 [color]
     ui = auto
 
