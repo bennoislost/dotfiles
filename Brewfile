@@ -4,6 +4,7 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
+tap 'homebrew/services'
 tap 'inviqa/tools'
 
 #
