@@ -12,6 +12,9 @@ alias ..="cd  .."
 # List current directories @TODO: pass arguments?
 alias dir="ls -lah | grep '^d'"
 
+# Safe-ish RM
+alias rm="rm -ri"
+
 # Nice list
 alias ll="ls -lah"
 
@@ -26,19 +29,17 @@ alias projects="cd ~/Projects"
 # Git SCM
 #######################################################
 
-# Sexy Status
-alias gstatus='git status -s'
-
 # really pisses me off
 alias gti='git '
-
 
 #######################################################
 # Networking
 #######################################################
 
-# fetch remote ip
+# IP Addresses
+alias localip="ipconfig getifaddr en0"
 alias remoteip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # flush dns cache
 alias flushdns="dscacheutil -flushcache"
@@ -53,11 +54,14 @@ done
 # Applications
 #######################################################
 
-# Launch iOS Simulator
-alias ios="open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+# Launch iOS Simulator - CBA to download Xcode
+#alias ios="open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # Vagrant
 alias vag="vagrant"
+
+# Homebrew Cask
+alias cask="brew cask"
 
 #######################################################
 # OSX
@@ -69,3 +73,11 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 
 # Remove data in Trash
 alias trashrm="sudo rm -rfv ~/.Trash"
+
+#######################################################
+# Util
+#######################################################
+
+# Edit popular config files
+alias hosts="sudo $EDITOR /etc/hosts"
+alias sshconfig="sudo $EDITOR ~/.ssh/config"
