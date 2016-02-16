@@ -14,6 +14,9 @@ export MANPAGER="less -X"
 # Colour in those GREPS
 export GREP_OPTIONS="--color=auto"
 
+# Homebrew cask options
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # nice one @bagwaa
 function parse_git_branch () {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
