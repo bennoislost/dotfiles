@@ -94,6 +94,11 @@
 
     # Undo last commit without deleting changes
     undo = reset --soft HEAD~1
+[include]
+    # Local config file for tokens, emails, etc
+    path = ~/.gitconfig.local
+[core]
+    excludesfile = "~/.gitignore"
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
@@ -114,4 +119,3 @@
     tool = pstorm
 [mergetool.pstorm]
     cmd = /usr/local/bin/pstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-
