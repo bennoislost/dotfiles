@@ -32,8 +32,20 @@
     # Switch to a branch, creating it if necessary: git go feature/name
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
+    # Log graph
+    lg = git --graph --pretty="oneline"
+
     # Interactive rebase with the given number of latest commits: git reb 10
     reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # Remote branches
+    remotes = remote -v
+
+    # Status, short
+    s = status -s
+
+    # status
+    st = status
 
     # Stash branch: git stb feature/stash_branch [stash_index]
     stb = stash branch
@@ -49,6 +61,9 @@
 
     # Stash save - Local mods. to a new stash list
     sts = stash save
+
+    # Tags
+    tags = tag -l
 
     # Undo last commit without deleting changes
     undo = reset --soft HEAD~1
