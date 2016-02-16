@@ -2,6 +2,9 @@
     name = Ben McManus
     email = user@server.loc
 [alias]
+    # List all aliases
+    aliases = "!git config --list | grep -i difftool | cut -c 7-"
+
     # Amend the currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
 
@@ -17,11 +20,14 @@
     # Changelog for tags or trees: git changelog master...feature/pimp_git_config
     changelog = log --pretty=oneline --no-merges
 
+    # Cleanup
+    cleanup = !git remote prune origin && git gc --aggressive && git clean -dfx && git stash clear
+
     # Checkout
     co = checkout
 
-    # Cleanup
-    cleanup = !git remote prune origin && git gc --aggressive && git clean -dfx && git stash clear
+    # Show contributors
+    contrib = shortlog --summary --numbered
 
     # show files that have changed between two branches (git dbr master..branch)
     dbr = diff --name-status
@@ -34,6 +40,9 @@
 
     # Log graph
     lg = git --graph --pretty="oneline"
+
+    # Last tag
+    lt = describe --tags --abbrev=0
 
     # Interactive rebase with the given number of latest commits: git reb 10
     reb = "!r() { git rebase -i HEAD~$1; }; r"
