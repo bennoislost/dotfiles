@@ -1,17 +1,34 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Make that bew warm
+# Confirm if a command exists
+function command_exists () {
+    \command -v ${1} > /dev/null 2>&1 || {
+      return 1;
+    }
+}
+
+function _get_brew() {
+  if ! command_exists 'brew'; then
+    echo 'Installing brew...'
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew tap homebrew/bundle
+  fi
+}
+
+function init() {
+  _get_brew;
+}
+
+init
+
+# Make sure we’re using the latest Homebrew
 brew update
 
-# Drop that sugar in
+# Upgrade any already-installed formulae
 brew upgrade
 
-# Stir that brew
-brew tap homebrew/dupes
+# Install new/missing brews/casks
+brew bundle
 
-# and drink
-brew install mysql
-brew install wget
-
-# clean that shit up for next time
+# Remove outdated versions from the cellar
 brew cleanup
