@@ -27,4 +27,14 @@
     dc = diff --cached
 [color]
     ui = auto
+[diff]
+    tool = pstorm
+[difftool]
+    prompt = false
+[difftool.pstorm]
+    cmd = /usr/local/bin/pstorm diff "$LOCAL" "$REMOTE"
+[merge]
+    tool = pstorm
+[mergetool.pstorm]
+    cmd = /usr/local/bin/pstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
