@@ -1,6 +1,121 @@
 [user]
-	name = Ben McManus
-	email = user@server.loc
-[color]
-	ui = auto
+    name = Ben McManus
+    email = user@server.loc
+[alias]
+    # List all aliases
+    aliases = "!git config --list | grep -i difftool | cut -c 7-"
 
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+
+    # Shorthand branch
+    br = branch
+
+    # Verbose branch output
+    branches = branch -a
+
+    # Changelog for tags or trees: git changelog master...feature/pimp_git_config
+    changelog = log --pretty=oneline --no-merges
+
+    # Commit
+    ci = commit
+
+    # clone
+    cl = clone
+
+    # Cleanup
+    cleanup = !git remote prune origin && git gc --aggressive && git clean -dfx && git stash clear
+
+    # Checkout
+    co = checkout
+
+    # Cherry Pick
+    cp = cherry-pick
+
+    # Show contributors
+    contrib = shortlog --summary --numbered
+
+    # Find File: git ff local.xml
+    ff = "!git ls-files | grep -i"
+
+    # show files that have changed between two branches (git dbr master..branch)
+    dbr = diff --name-status
+
+    # Diff cached
+    dc = diff --cached
+
+    # Switch to a branch, creating it if necessary: git go feature/name
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+    # Find string in codebase
+    gr = grep -Ii --heading
+
+    # Log file changes: git lf local.xml
+    lf = log -u
+
+    # Log graph
+    lg = log --graph --decorate --pretty="oneline"
+
+    # Log pretty: git lp master...feature/name
+    lp = log --oneline --decorate --date=relative --pretty=format:"%C(yellow)%h %ad%C(red)%d %C(reset)%s%C(green) [%cn]"
+
+    # Last tag
+    lt = describe --tags --abbrev=0
+
+    # Interactive rebase with the given number of latest commits: git reb 10
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # Remote branches
+    remotes = remote -v
+
+    # Status, short
+    s = status -s
+
+    # status
+    st = status
+
+    # Stash branch: git stb feature/stash_branch [stash_index]
+    stb = stash branch
+
+    # Stash clear - Remove all stash states
+    stc = stash clear
+
+    # Stash list
+    stl = stash list
+
+    # Stash pop - Apply last item to working tree and remove from stash list
+    stp = stash pop
+
+    # Stash save - Local mods. to a new stash list
+    sts = stash save
+
+    # Tags
+    tags = tag -l
+
+    # Undo last commit without deleting changes
+    undo = reset --soft HEAD~1
+[include]
+    # Local config file for tokens, emails, etc
+    path = ~/.gitconfig.local
+[core]
+    excludesfile = "~/.gitignore"
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+[help]
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
+[grep]
+    linenumber = true
+[color]
+    ui = auto
+[diff]
+    tool = pstorm
+[difftool]
+    prompt = false
+[difftool.pstorm]
+    cmd = /usr/local/bin/pstorm diff "$LOCAL" "$REMOTE"
+[merge]
+    tool = pstorm
+[mergetool.pstorm]
+    cmd = /usr/local/bin/pstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
