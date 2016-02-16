@@ -29,6 +29,9 @@
     # Show contributors
     contrib = shortlog --summary --numbered
 
+    # Find File: git ff local.xml
+    ff = "!git ls-files | grep -i"
+
     # show files that have changed between two branches (git dbr master..branch)
     dbr = diff --name-status
 
@@ -38,8 +41,14 @@
     # Switch to a branch, creating it if necessary: git go feature/name
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
+    # Find string in codebase
+    gr = grep -Ii --heading
+
     # Log graph
-    lg = git --graph --pretty="oneline"
+    lg = log --graph --decorate --pretty="oneline"
+
+    # Log pretty: git lp master...feature/name
+    lp = log --oneline --decorate --date=relative --pretty=format:"%C(yellow)%h %ad%C(red)%d %C(reset)%s%C(green) [%cn]"
 
     # Last tag
     lt = describe --tags --abbrev=0
@@ -82,6 +91,8 @@
 [help]
     # Automatically correct and execute mistyped commands
     autocorrect = 1
+[grep]
+    linenumber = true
 [color]
     ui = auto
 [diff]
