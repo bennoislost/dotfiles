@@ -7,7 +7,7 @@
 To install these dotfiles without Git:
 
 ```
-cd; curl -#L https://github.com/bennoislost/dotfiles/zipball/master | tar -xzv --strip-components 1 --exclude=README.md
+cd; curl -#L https://github.com/bennoislost/dotfiles/zipball/master | tar -xzv --strip-components 1 --exclude=README.md; cd -
 ```
 
 Update using that script.
@@ -22,4 +22,12 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```
 ./.osx
+```
+
+### Brew & Casks
+
+Will upgrade homebrew, upgrade existing packages & install missing apps from `Brewfile`.
+
+```
+./.brew
 ```
