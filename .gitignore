@@ -1,5 +1,9 @@
-# Get the fuck out
+# Jog on
 .DS_Store
 .Spotlight-V100
 .Trashes
 vendor
+.idea
+.sass-cache
+.sass-cache/*
+node_modules
