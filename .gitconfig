@@ -80,14 +80,14 @@
     # status
     st = status
 
+    # Stashes
+    stashes = stash list
+
     # Stash branch: git stb feature/stash_branch [stash_index]
     stb = stash branch
 
     # Stash clear - Remove all stash states
     stc = stash clear
-
-    # Stash list
-    stl = stash list
 
     # Stash pop - Apply last item to working tree and remove from stash list
     stp = stash pop
