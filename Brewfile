@@ -27,6 +27,7 @@ brew 'wget'
 #
 cask 'adium'
 cask 'adobe-reader'
+cask 'alfred'
 cask 'atom'
 cask 'charles'
 cask 'chefdk'
