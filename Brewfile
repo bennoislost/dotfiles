@@ -12,6 +12,7 @@ tap 'inviqa/tools'
 #
 brew 'openssl'
 brew 'ansible'
+brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
 brew 'pkg-config'
 brew 'dnsmasq'
 brew 'git'
