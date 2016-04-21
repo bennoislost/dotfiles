@@ -55,7 +55,8 @@ done
 #######################################################
 
 # Launch iOS Simulator - CBA to download Xcode
-#alias ios="open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias iossim="open -a /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+alias ioswatch="open -a /Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app"
 
 # Vagrant
 alias vag="vagrant"
