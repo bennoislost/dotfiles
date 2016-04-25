@@ -124,6 +124,9 @@
     ui = auto
 [diff]
     tool = pstorm
+
+    # Detect copies as well as renames
+    renames = copies
 [difftool]
     prompt = false
 [difftool.pstorm]
