@@ -80,5 +80,5 @@ alias trashrm="sudo rm -rfv ~/.Trash"
 #######################################################
 
 # Edit popular config files
-alias hosts="sudo $EDITOR /etc/hosts"
-alias sshconfig="sudo $EDITOR ~/.ssh/config"
+alias hosts="$EDITOR /etc/hosts"
+alias sshconfig="$EDITOR ~/.ssh/config"
