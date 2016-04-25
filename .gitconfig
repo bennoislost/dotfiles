@@ -108,6 +108,10 @@
     path = ~/.gitconfig.local
 [core]
     excludesfile = "~/.gitignore"
+
+    # Make `git rebase` safer on OS X
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
