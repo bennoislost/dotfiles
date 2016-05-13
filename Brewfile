@@ -11,15 +11,24 @@ tap 'inviqa/tools'
 #
 # Brews
 #
+brew 'pkg-config'
+brew 'libyaml'
 brew 'openssl'
 brew 'ansible'
-brew 'gpg'
-brew 'keybase'
-brew 'lastpass-cli', args: ['with-pinentry', 'with-doc']
-brew 'pkg-config'
+brew 'docbook'
+brew 'asciidoc'
+brew 'autoconf'
+brew 'boost'
+brew 'cmake'
 brew 'dnsmasq'
 brew 'git'
+brew 'gnupg'
 brew 'go'
+brew 'keybase'
+brew 'libgpg-error'
+brew 'libassuan'
+brew 'pinentry'
+brew 'lastpass-cli', args: ['with-doc', 'with-pinentry']
 brew 'mailhog'
 brew 'mysql'
 brew 'ruby-build'
