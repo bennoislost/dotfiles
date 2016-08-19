@@ -7,6 +7,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'inviqa/tools'
+tap 'neovim/neovim'
 
 #
 # Brews
@@ -18,25 +19,32 @@ brew 'ansible'
 brew 'docbook'
 brew 'asciidoc'
 brew 'autoconf'
+brew 'automake'
 brew 'boost'
 brew 'cloc'
 brew 'cmake'
 brew 'diff-so-fancy'
 brew 'dnsmasq'
+brew 'gettext'
 brew 'git'
 brew 'gnupg'
 brew 'go'
+brew 'fzf'
+brew 'gnupg'
 brew 'keybase'
 brew 'libgpg-error'
 brew 'libassuan'
 brew 'pinentry'
 brew 'lastpass-cli', args: ['with-doc', 'with-pinentry']
+brew 'libtool'
 brew 'mailhog'
 brew 'mysql'
 brew 'ruby-build'
 brew 'rbenv'
+brew 'rtmpdump'
 brew 'thefuck'
 brew 'wget'
+brew 'youtube-dl', args: ['with-rtmpdump']
 
 #
 # Casks
