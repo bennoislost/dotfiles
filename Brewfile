@@ -24,7 +24,7 @@ brew 'boost'
 brew 'cloc'
 brew 'cmake'
 brew 'diff-so-fancy'
-brew 'dnsmasq'
+brew 'dnsmasq', service_restart: true
 brew 'faac'
 brew 'gettext'
 brew 'git'
@@ -43,7 +43,7 @@ brew 'pinentry'
 brew 'lastpass-cli', args: ['with-doc', 'with-pinentry']
 brew 'libav'
 brew 'libtool'
-brew 'mailhog'
+brew 'mailhog', service_restart: true
 brew 'mysql'
 brew 'ruby-build'
 brew 'rbenv'
