@@ -8,6 +8,9 @@ export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
+# Nothing fancy bytes locale
+export LC_CTYPE=C
+
 # Don't clear screen when exiting a man page
 export MANPAGER="less -X"
 

@@ -82,6 +82,11 @@ function switchphp() {
 	return
 }
 
+# Simple random string - Use for Magento admin path
+function random-string() {
+    head /dev/urandom | tr -dc 'A-Za-z0-9' | head -c 10
+}
+
 # Add Space to dock
 function dock-space() {
 
