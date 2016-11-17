@@ -124,3 +124,19 @@ function xdebug-stoplistening()
 {
 	unset XDEBUG_CONFIG
 }
+
+# Start docker container for DNS
+# create /etc/resolver/docker with the following
+#
+# nameserver 127.0.0.1
+# port 53535
+function dns-docker() {
+    docker run -d \
+        --name docker_dns_dnsmasq \
+        -p 53535:53/tcp \
+        -p 53535:53/udp \
+        --cap-add=NET_ADMIN \
+        andyshinn/dnsmasq \
+        --address=/docker/127.0.0.1
+}
+
