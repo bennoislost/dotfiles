@@ -80,6 +80,9 @@
     # status
     st = status
 
+    # staged files
+    staged = diff --name-only --cached
+
     # Stashes
     stashes = stash list
 
