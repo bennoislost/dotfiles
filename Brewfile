@@ -1,98 +1,136 @@
 #
 # Tap dat
 #
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/services'
-tap 'inviqa/tools'
-tap 'neovim/neovim'
+tap "caskroom/cask"
+tap "caskroom/versions"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "homebrew/versions"
+tap "inviqa/tools"
+tap "neovim/neovim"
 
 #
 # Brews
 #
-brew 'pkg-config'
-brew 'libyaml'
-brew 'openssl'
-brew 'ansible'
-brew 'docbook'
-brew 'asciidoc'
-brew 'autoconf'
-brew 'automake'
-brew 'boost'
-brew 'cloc'
-brew 'cmake'
-brew 'diff-so-fancy'
-brew 'dnsmasq', service_restart: true
-brew 'faac'
-brew 'gettext'
-brew 'git'
-brew 'x264'
-brew 'lame'
-brew 'xvid'
-brew 'rtmpdump'
-brew 'ffmpeg'
-brew 'go'
-brew 'fzf'
-brew 'gnupg'
-brew 'keybase'
-brew 'libgpg-error'
-brew 'libassuan'
-brew 'pinentry'
-brew 'lastpass-cli', args: ['with-doc', 'with-pinentry']
-brew 'libav'
-brew 'libtool'
-brew 'mailhog', service_restart: true
-brew 'mysql'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'thefuck'
-brew 'wget'
-brew 'youtube-dl', args: ['with-rtmpdump']
+brew "libyaml"
+brew "ansible"
+brew "docbook"
+brew "asciidoc"
+brew "autoconf"
+brew "automake"
+brew "boost"
+brew "cloc"
+brew "cmake"
+brew "diff-so-fancy"
+brew "dnsmasq", restart_service: true
+brew "faac"
+brew "lame"
+brew "git"
+brew "x264"
+brew "xvid"
+brew "ffmpeg"
+brew "fswatch"
+brew "fzf"
+brew "gettext"
+brew "gifsicle"
+brew "libgpg-error"
+brew "libassuan"
+brew "pinentry"
+brew "gnupg"
+brew "go"
+brew "htop"
+brew "hugo"
+brew "openssl"
+brew "lastpass-cli", args: ["with-doc", "with-pinentry"]
+brew "libav"
+brew "libtool"
+brew "mailhog", restart_service: true
+brew "mas"
+brew "mysql"
+brew "mysql@5.5"
+brew "neovim"
+brew "nmap"
+brew "pkg-config"
+brew "pv"
+brew "ruby-build"
+brew "rbenv"
+brew "rtmpdump"
+brew "thefuck"
+brew "wget"
+brew "yarn"
+brew "youtube-dl", args: ["with-rtmpdump"]
 
 #
 # Casks
 #
-cask 'adium'
-cask 'adobe-reader'
-cask 'alfred'
-cask 'anatine'
-cask 'atom'
-cask 'charles'
-cask 'chefdk'
-cask 'dash'
-cask 'docker'
-cask 'electron'
-cask 'firefox'
-cask 'fluid'
-cask 'franz'
-cask 'google-chrome'
-cask 'google-chrome-canary'
-cask 'hem'
-cask 'iterm2'
-cask 'java6'
-cask 'kitematic'
-cask 'lastpass'
-cask 'licecap'
-cask 'macdown'
-cask 'ngrok'
-cask 'opera'
-cask 'phpstorm'
-cask 'rdm'
-cask 'sequel-pro'
-cask 'skype'
-cask 'slack'
-cask 'sonoair'
-cask 'sonos'
-cask 'spectacle'
-cask 'spotify'
-cask 'staruml'
-cask 'sublime-text'
-cask 'thyme'
-cask 'toggldesktop'
-cask 'transmission'
-cask 'vagrant'
-cask 'vagrant-manager'
-cask 'virtualbox'
-cask 'vlc'
+cask "adium"
+cask "adobe-reader"
+cask "alfred"
+cask "anatine"
+cask "android-platform-tools"
+cask "atom"
+cask "blisk"
+cask "charles"
+cask "chefdk"
+cask "dash"
+cask "docker"
+cask "electron"
+cask "firefox"
+cask "fluid"
+cask "flux"
+cask "franz"
+cask "garmin-virb-edit"
+cask "gifrocket"
+cask "gimp"
+cask "gogland"
+cask "google-chrome"
+cask "iterm2"
+cask "java"
+cask "kap"
+cask "kitematic"
+cask "lastpass"
+cask "licecap"
+cask "macdown"
+cask "mongodb-compass"
+cask "ngrok"
+cask "numi"
+cask "opera"
+cask "phpstorm"
+cask "postman"
+cask "rdm"
+cask "sequel-pro"
+cask "skype"
+cask "slack"
+cask "soapui"
+cask "sonoair"
+cask "sonos"
+cask "spectacle"
+cask "spotify"
+cask "sqlitebrowser"
+cask "staruml"
+cask "steam"
+cask "sublime-text"
+cask "thyme"
+cask "toggldesktop"
+cask "transmission"
+cask "typora"
+cask "vagrant"
+cask "vagrant-manager"
+cask "virtualbox"
+cask "visual-studio-code"
+cask "vlc"
+cask "zoomus"
+cask "caskroom/versions/google-chrome-canary"
+cask "caskroom/versions/java6"
+cask "inviqa/tools/hem"
+
+#
+# App Store
+#
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Install macOS Sierra", id: 1127487414
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
