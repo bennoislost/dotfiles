@@ -140,3 +140,15 @@ function dns-docker() {
         --address=/docker/127.0.0.1
 }
 
+#
+# Open chrome for "Person"
+#
+function open-chrome() {
+    if [ "$#" -eq 0 ]
+    then
+        open -a "Google Chrome"
+        return
+    fi
+
+    open -a "Google Chrome" --args --profile-directory="$1"
+}
