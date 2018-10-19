@@ -2,7 +2,7 @@
 
 ## Installation
 
-### Dirty one liner
+### One liner
 
 To install these dotfiles without Git:
 
@@ -21,13 +21,5 @@ If `~/.extra` exists, it will be sourced along with the other files. Useful for 
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```
-./.osx
-```
-
-### Brew & Casks
-
-Will upgrade homebrew, upgrade existing packages & install missing apps from `Brewfile`.
-
-```
-./.brew
+./.macos
 ```

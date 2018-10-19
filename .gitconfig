@@ -128,15 +128,15 @@
 [color]
     ui = auto
 [diff]
-    tool = pstorm
+    tool = phpstorm
 
     # Detect copies as well as renames
     renames = copies
 [difftool]
     prompt = false
-[difftool.pstorm]
-    cmd = /usr/local/bin/pstorm diff "$LOCAL" "$REMOTE"
+[difftool.phpstorm]
+    cmd = /usr/local/bin/phpstorm diff "$LOCAL" "$REMOTE"
 [merge]
-    tool = pstorm
-[mergetool.pstorm]
-    cmd = /usr/local/bin/pstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+    tool = phpstorm
+[mergetool.phpstorm]
+    cmd = /usr/local/bin/phpstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"

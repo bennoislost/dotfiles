@@ -1,7 +1,9 @@
-# Jog on
+# Folder configuration & external drives
 .DS_Store
 .Spotlight-V100
 .Trashes
+
+# Software dependencies / artifacts
 vendor
 .idea
 .sass-cache
