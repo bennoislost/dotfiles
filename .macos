@@ -312,6 +312,7 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Set preferences
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "https://gist.githubusercontent.com/bennoislost/895445f261eaa55f15b1/raw/b4313faf4f9b50c249bbdec8d8985518daadbd18/com.googlecode.iterm2.plist"
 
 ############
