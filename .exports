@@ -1,25 +1,35 @@
 # ~/.exports - create some variables....
 
 # Define default editor
-export EDITOR="subl -w"
+export EDITOR="vim"
 
 # Pretty Coloursdisct
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
-# Nothing fancy bytes locale
-export LC_CTYPE=C
-export LANG=C
+# Increase Bash history size. Allow 32³ entries; the default is 500.
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}";
+# Omit duplicates and commands that begin with a space from history.
+export HISTCONTROL='ignoreboth';
 
+# Prefer US English and use UTF-8.
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8'
 # Don't clear screen when exiting a man page
 export MANPAGER="less -X"
 
 # Colour in those GREPS
 export GREP_OPTIONS="--color=auto"
 
-# Homebrew cask options
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# Avoid issues with `gpg` as installed via Homebrew.
+# https://stackoverflow.com/a/42265848/96656
+export GPG_TTY=$(tty);
+
+# Hide the “default interactive shell is now zsh” warning on macOS.
+export BASH_SILENCE_DEPRECATION_WARNING=1;
+
 
 # nice one @bagwaa
 function parse_git_branch () {

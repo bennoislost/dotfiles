@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/bagwaa/vim/master/.vim/colors/monokai.vim
